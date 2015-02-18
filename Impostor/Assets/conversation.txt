@@ -1,28 +1,112 @@
 M
-1|John Oliver|Yo yoyo check these sick freestyles. I fucked yo bitch.
+1|boozyshakes|Hey, still there?
 R
-Fight me, John
-U gonna get this work John
-John you a fuckboi foh
-Options for the Player to choose.
+Yeah, sorry. Where were we?|0
+Yeah dude sup?|0
+No, this is their roommate.|99
+No I'm dead|99|103
 M
-1|John Oliver|Ahahaha this boi think he got skills kk come with it then.
+1|boozyshakes|Dude that was crazy. I can't believe David didn't like die when he fell off that bookshelf. What did knocked over?
 R
-lol
-lol
-lol
-haha
+That ladder, right?|1
+A lamp. Shattered like glass..because it was XD|-1
+It was too dark to see|99
+Lol idk, fuck outta here|99
 M
-1|John Oliver|fam don't laugh at me ooooooh how you doin tho?
+1|boozyshakes|Oh yeah! That had to hurt.
 R
-chillin with the squad
-feelin like a muhfukkin uhhhh
-none of your
-business
+what a noob lol|1
+the man had parkour skills|-1
+Yep|0
+Mhm|0
 M
-1|John Oliver|good to here loc cuz I got a mission for u ya dig?
+1|boozyshakes|where did you hide when the cops showed up?
 R
-what's the job
-ahaha fam u dont work
-is it fuckin yo girl?
-lol mi5 lookin ass
+Broom closet|-2
+bathroom|2
+not telling|0
+with your mom #decimated|1
+M
+1|boozyshakes|That's awesome! where did you get the keys?
+R
+Sharon gave them to me|-1
+It wasn't locked|0
+I used my hair clip|0
+OPTION 4|0
+M
+1|boozyshakes|I thought Francisco was in the bathroom?
+R
+he was. I was testing you|0
+...|0
+no he was with the pizza|-1
+yeah we made out|99 
+M
+1|boozyshakes|Sharon trusted you with the keys to her aunt's house?
+R
+Yeah she's trusted me since I drove her to CareBear Con|-3
+Maybe. Or maybe I STOLE THEM!|0
+She was too drunk to hold them herself.|0
+OPTION 4|0
+M
+1|boozyshakes|I can't believe that that exists
+R
+Well it does and we went|0
+w/e, don't ask questions|3
+Look it up!|-1
+OPTION 4|0
+M
+1|boozyshakes|omg it does. TAKE ME WITH YOU NEXT TIME.
+R
+We will if you don't asphyxiate yourself|0
+no :P|0
+hell no, I can't stand beling around for more than 5 minutes|0
+Can you pay?|0
+M
+1|boozyshakes|Of couse
+R
+Great. Pay for pizza. A seahorse shaped pizza|-1
+Then you can take a taxi LOL|0
+Okay cool yeah|0
+OPTION 4|0
+M
+1|boozyshakes|You and seahorses
+R
+They rule the ocean as draconic heirs|-2
+Don't be dissin|0
+Yes me and seahorses|0
+OPTION 4|0
+M
+1|boozyshakes|Makes me nostalgic
+R
+For Titanland?|-1
+Yeah|0
+What for|1
+you're such a baby|0
+M
+1|boozyshakes|Yeah. Their seahorse shakes were the best
+R
+not really|0
+Maybe it'll reopen again someday. We must maintain vigil|-1
+they were <3|0
+OPTION 4|0
+M
+1|boozyshakes|We can only hope. Where do we go now though? I need my sugar
+R
+Cream Queen = best consolation prize|0
+you need less sugar|0
+We could go to the dinosaur|0
+OPTION 4|0
+M
+1|boozyshakes|TRUE. Aw, you gave me an even worse sweet tooth.
+R
+I'll treat you to one next Friday|-1
+Your face gives me heartburn|-2
+Option 3|0
+OPtion 4|0
+M
+1|boozyshakes|You're the best friend ever!
+R
+You win!
+Congrats I guess
+No one really cares tho
+Get a job.

@@ -15,9 +15,12 @@ public class ChatManager : MonoBehaviour {
 	public TextAsset text;
 	private string[] conversation;
 	private int conversationIndex = 0;
+	private int skipToIndex = -1;
 
 	private bool waitForInput = false;
 	private List<GameObject> chatMessages = new List<GameObject>();
+
+	private int supsicionScore = 0; // Used for the lose condition
 
 	// Use this for initialization
 	void Start () {
@@ -42,7 +45,7 @@ public class ChatManager : MonoBehaviour {
 		}
 
 		// Send a 'message' from the other person.
-		if (conversation[conversationIndex][0] == 'M') {
+		if (conversation[conversationIndex][0] == 'M' && conversation[conversationIndex].Length == 2) {
 			//Debug.Log ("This is correct");
 			DisableButtons();
 
@@ -54,7 +57,7 @@ public class ChatManager : MonoBehaviour {
 		}
 
 		// We really don't want to do anything here yet;
-		if (conversation[conversationIndex][0] == 'R') {
+		if (conversation[conversationIndex][0] == 'R' && conversation[conversationIndex].Length == 2) {
 			EnableButtons ();
 			return;
 		}
@@ -73,17 +76,35 @@ public class ChatManager : MonoBehaviour {
 		Debug.Log ("Sending Player Message");
 		GameObject msg = Instantiate (chatPrefab, chatInitialPosition, Quaternion.identity) as GameObject;
 		msg.transform.parent = canvas.transform;
-		msg.GetComponent<ChatMessage>().Initialize ("Super Nerd", conversation[conversationIndex-messageIndex], chatIcons[0]);
+		string[] responseMessage = conversation [conversationIndex - messageIndex].Split ('|');
+		msg.GetComponent<ChatMessage>().Initialize ("ball_is_life", responseMessage[0], chatIcons[0]);
+		
+		int choiceSuspicion = int.Parse (responseMessage [1]);
+		supsicionScore += choiceSuspicion;
+		Debug.Log ("Current Suspision level: " + choiceSuspicion);
+
+		// Chat Skip, if we chose an element that caused us to skip further ahead
+		// Unintended side effect i guess, we can also go backwards
+		if (responseMessage.Length == 3) {
+			skipToIndex = int.Parse (responseMessage[2]);
+		}
+
+		else {
+			skipToIndex = -1;
+		}
+
 		PushChatUp ();
 		chatMessages.Add (msg);
 		DisableButtons ();
-		Invoke ("IncreaseChatIndex", 3f);
+
+		Invoke ("IncreaseChatIndex", Random.Range (2.5f, 3.5f));
 	}
 
 	public void SendMessage(string name, string message, Sprite image) {
 		GameObject msg = Instantiate(chatPrefab, chatInitialPosition, Quaternion.identity) as GameObject;
 		msg.transform.parent = canvas.transform;
 		msg.GetComponent<ChatMessage>().Initialize(name, message, image);
+
 		PushChatUp ();
 		chatMessages.Add (msg);
 	}
@@ -96,7 +117,13 @@ public class ChatManager : MonoBehaviour {
 
 	// Function we can invoke, hacky but idgaf
 	private void IncreaseChatIndex() {
-		conversationIndex++;
+		if (skipToIndex != -1) {
+			conversationIndex = skipToIndex;
+		}
+
+		else {
+			conversationIndex++;
+		}
 	}
 	// BUTTON MANAGER STUFF
 	// THIS SHOULD BE A SEPARATE SCRIPT BUT IDGAF.
@@ -106,7 +133,8 @@ public class ChatManager : MonoBehaviour {
 			Debug.Log ("Enabling Buttons: " + buttons.Length);
 			button.SetActive (true);
 			conversationIndex++;
-			button.GetComponentInChildren<Text>().text = conversation[conversationIndex];
+			string[] responseText = conversation[conversationIndex].Split ('|');
+			button.GetComponentInChildren<Text>().text = responseText[0];
 		}
 	}
 
