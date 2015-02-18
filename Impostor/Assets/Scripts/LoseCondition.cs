@@ -54,6 +54,7 @@ public class LoseCondition : MonoBehaviour {
 
 		if(letterCount == baseText.Length)
 		{
+			disableOnLose.SetActive(false);
 			CameraZoomOnLose();
 			SendMessage();
 		}
@@ -68,6 +69,7 @@ public class LoseCondition : MonoBehaviour {
 	public SpriteRenderer spriteRenderer;
 	public Sprite pressedButtonSprite;
 	public Sprite defaultSprite;
+	public GameObject disableOnLose;
 
 	void SendMessage()
 	{

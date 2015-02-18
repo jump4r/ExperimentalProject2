@@ -88,7 +88,7 @@ public class ChatManager : MonoBehaviour {
 		msg.GetComponent<ChatMessage>().Initialize ("ball_is_life", responseMessage[0], chatIcons[0]);
 		
 		int choiceSuspicion = int.Parse (responseMessage [1]);
-		loseObject.AddPercent(choiceSuspicion);
+		loseObject.AddPercent((float)choiceSuspicion / 100f);
 
 		supsicionScore += choiceSuspicion;
 		Debug.Log ("Current Suspision level: " + choiceSuspicion);
