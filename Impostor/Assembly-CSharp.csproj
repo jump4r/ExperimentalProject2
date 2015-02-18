@@ -46,13 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\LoseCondition.cs" />
      <Compile Include="Assets\Scripts\ChatManager.cs" />
      <Compile Include="Assets\Scripts\ChatMessage.cs" />
      <Compile Include="Assets\Scripts\Interactable.cs" />
+     <Compile Include="Assets\Scripts\LoseCondition.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
+     <Compile Include="Assets\Scripts\ScrollScript.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
-     <Compile Include="Assets\ScrollScript.cs" />
      <None Include="Assets\conversation.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>

@@ -13,7 +13,7 @@ public class ChatMessage : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		RectTransform rt = GetComponent<RectTransform>();
-		rt.anchoredPosition = new Vector2(-12f, -161f);
+		rt.anchoredPosition = new Vector2(-10f, -161f);
 		Debug.Log("Rect Position: " + rt.anchoredPosition);
 	}
 

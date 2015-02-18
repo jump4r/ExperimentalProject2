@@ -23,30 +23,37 @@ M
 1|boozyshakes|where did you hide when the cops showed up?
 R
 Broom closet|-2
-bathroom|2
-not telling|0
-with your mom #decimated|1
+bathroom|2|35
+not telling|0|42
+with your mom #decimated|1|42
 M
 1|boozyshakes|That's awesome! where did you get the keys?
 R
-Sharon gave them to me|-1
-It wasn't locked|0
-I used my hair clip|0
-OPTION 4|0
+Sharon gave them to me|-1|49
+It wasn't locked|0|49
+I used my hair clip|99
+Uhhhhhhh 4|99
 M
 1|boozyshakes|I thought Francisco was in the bathroom?
 R
-he was. I was testing you|0
-...|0
-no he was with the pizza|-1
+he was. I was testing you|0|49
+...|0|49
+no he was with the pizza|-1|49
 yeah we made out|99 
+M
+1|boozyshakes|So juvinile, you were in the closet right?
+R
+Uhhh|3
+sure|0
+nah bruh|99
+seirously with was with ur mom|99
 M
 1|boozyshakes|Sharon trusted you with the keys to her aunt's house?
 R
 Yeah she's trusted me since I drove her to CareBear Con|-3
 Maybe. Or maybe I STOLE THEM!|0
 She was too drunk to hold them herself.|0
-OPTION 4|0
+Ugh why you always hatin fam?|99
 M
 1|boozyshakes|I can't believe that that exists
 R
