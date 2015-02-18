@@ -58,7 +58,18 @@ public class LoseCondition : MonoBehaviour {
 			CameraZoomOnLose();
 			SendMessage();
 		}
+
+		if(win)
+		{
+			disableOnLose.SetActive(false);
+			CameraZoomOnLose();
+			text.text = "i had fun chatting with you on myface earlier. see u later";
+			SendMessage();
+		}
 	}
+
+	public bool win = true;
+
 
 	public float sendMessageTime = 20f;
 	float sendMessageCount;

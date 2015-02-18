@@ -70,6 +70,12 @@ public class ChatManager : MonoBehaviour {
 			return;
 		}
 
+		//Win condition
+		if(conversationIndex == conversation.Length)
+		{
+			loseObject.win = true;
+		}
+
 		// And we definately don't want to touch this. 
 	   	else {
 			return;
@@ -86,7 +92,14 @@ public class ChatManager : MonoBehaviour {
 		msg.transform.parent = canvas.transform;
 		string[] responseMessage = conversation [conversationIndex - messageIndex].Split ('|');
 		msg.GetComponent<ChatMessage>().Initialize ("ball_is_life", responseMessage[0], chatIcons[0]);
-		
+
+		//Win condition
+		if(conversationIndex == conversation.Length)
+		{
+			loseObject.win = true;
+			return;
+		}
+
 		int choiceSuspicion = int.Parse (responseMessage [1]);
 		loseObject.AddPercent((float)choiceSuspicion / 100f);
 
