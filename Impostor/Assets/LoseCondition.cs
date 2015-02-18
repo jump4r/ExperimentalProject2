@@ -21,7 +21,6 @@ public class LoseCondition : MonoBehaviour {
 	void Start () {
 		text = GetComponent<Text>();
 		baseText = text.text;
-
 	}
 	
 	// Update is called once per frame
@@ -30,23 +29,29 @@ public class LoseCondition : MonoBehaviour {
 
 		if(timer > timePerLetter || (timer > minTimePerLetter && lettersToType > 0))
 		{
-			letterCount += 1;
+			letterCount += (int)Mathf.Sign(lettersToType);
+
 			if(letterCount > baseText.Length)
 			{
 				letterCount = baseText.Length;
 			}
 
+			if(letterCount < 0)
+			{
+				letterCount = 0;
+			}
+
 			text.text = baseText.Substring(0, letterCount);
 			timer = 0f;
 
-			if(lettersToType > 0)
+			if(Mathf.Abs(lettersToType) > 0)
 			{
-				lettersToType -= 1;
+				lettersToType -= (int)Mathf.Sign(lettersToType);
 			}
 		}
 	}
 
-	void AddPercent(float amount)
+	public void AddPercent(float amount)
 	{
 		lettersToType += (int)(baseText.Length * amount);
 	}
