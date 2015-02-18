@@ -22,7 +22,6 @@ public class LoseCondition : MonoBehaviour {
 		text = GetComponent<Text>();
 		baseText = text.text;
 
-		AddPercent(.5f);
 	}
 	
 	// Update is called once per frame
