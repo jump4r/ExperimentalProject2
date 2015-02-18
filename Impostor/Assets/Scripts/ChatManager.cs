@@ -44,7 +44,7 @@ public class ChatManager : MonoBehaviour {
 		// Send a 'message' from the other person.
 		if (conversation[conversationIndex][0] == 'M') {
 			//Debug.Log ("This is correct");
-			//DisableButtons();
+			DisableButtons();
 
 			string[] content = conversation[conversationIndex+1].Split ('|');
 			SendMessage ((string)content[1], (string)content[2], chatIcons[int.Parse (content[0])]);
@@ -76,6 +76,7 @@ public class ChatManager : MonoBehaviour {
 		msg.GetComponent<ChatMessage>().Initialize ("Super Nerd", conversation[conversationIndex-messageIndex], chatIcons[0]);
 		PushChatUp ();
 		chatMessages.Add (msg);
+		DisableButtons ();
 		Invoke ("IncreaseChatIndex", 3f);
 	}
 
@@ -89,7 +90,7 @@ public class ChatManager : MonoBehaviour {
 	
 	private void PushChatUp() {
 		foreach (GameObject message in chatMessages) {
-			message.GetComponent<RectTransform>().anchoredPosition = new Vector2(message.GetComponent<RectTransform>().anchoredPosition.x, message.GetComponent<RectTransform>().anchoredPosition.y + 70f);
+			message.GetComponent<RectTransform>().anchoredPosition = new Vector2(message.GetComponent<RectTransform>().anchoredPosition.x, message.GetComponent<RectTransform>().anchoredPosition.y + 100f);
 		}
 	}
 
