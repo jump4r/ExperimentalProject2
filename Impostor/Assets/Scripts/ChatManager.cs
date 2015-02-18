@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class ChatManager : MonoBehaviour {
 
+	public AudioClip sendSound;
+	public AudioClip receiveSound;
+
 	public GameObject chatPrefab;
 	public Vector3 chatInitialPosition;
 	public GameObject canvas;
@@ -56,6 +59,8 @@ public class ChatManager : MonoBehaviour {
 			SendMessage ((string)content[1], (string)content[2], chatIcons[int.Parse (content[0])]);
 			conversationIndex = conversationIndex + 2;
 			Debug.Log (conversationIndex);
+
+			audio.PlayOneShot(receiveSound);
 			return;
 		}
 
@@ -103,6 +108,8 @@ public class ChatManager : MonoBehaviour {
 		DisableButtons ();
 
 		Invoke ("IncreaseChatIndex", Random.Range (2.5f, 3.5f));
+
+		audio.PlayOneShot(sendSound);
 	}
 
 	public void SendMessage(string name, string message, Sprite image) {
